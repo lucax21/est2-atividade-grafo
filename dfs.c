@@ -9,9 +9,8 @@ void busca_profundidade(Graph g, int inicio, int visitado[], int cont)
     visitado[inicio] = cont;
     for (i = 0; i < g->adj[inicio]; i++)
     {
-        // if (!visitado[g->adj[inicio][i]])
+        // if (!visitado[])
         // {
-        //     busca_profundidade(g, g->adj[inicio][i], visitado, cont + 1);
         // }
     }
 }
@@ -24,6 +23,7 @@ void busca_profundidade_grafo(Graph g, int inicio, int visitado[])
     {
         visitado[i] = 0;
     }
+    busca_profundidade(g, inicio, visitado[],cont);
 }
 
 void busca_largura(Graph g, int inicio, int v[])
